@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645600405618",
+    "project_id": "amr-el7la2",
+    "storage_bucket": "amr-el7la2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645600405618:android:4dd0e190e875292860baeb",
+        "android_client_info": {
+          "package_name": "com.example.saloonbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645600405618-tk4cagfuqe10jp17gte225faebom8o1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBS7kKsqXVmX32Tcd_c-bmTlFOOnDxnoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645600405618-tk4cagfuqe10jp17gte225faebom8o1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
