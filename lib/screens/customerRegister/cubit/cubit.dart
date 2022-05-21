@@ -32,17 +32,17 @@ class CustomerRegisterCubit extends Cubit<CustomerRegisterState>{
     required String uId,
   }){
     emit(SetCustomerDataLoadingsState());
-    UserModel usermodel = UserModel(
+    UserModel userModel = UserModel(
       uId: uId,
       email: emailController.text,
-      password: phoneController.text,
+      password: passwordController.text,
       name: nameController.text,
       phone: phoneController.text,
     );
     FirebaseFirestore.instance
         .collection('customer')
         .doc(uId)
-        .set(usermodel.toMap())
+        .set(userModel.toMap())
         .then((value){
       emit(SetCustomerDataSuccessState());
     }).catchError((error){

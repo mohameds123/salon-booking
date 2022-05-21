@@ -9,7 +9,6 @@ import '../login/LoginScreen.dart';
 class StylistRegister extends StatelessWidget {
   var form_key = GlobalKey<FormState>();
   StylistRegister({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<StylistRegisterCubit,StylistRegisterState>(
@@ -213,39 +212,17 @@ class StylistRegister extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 10,left: 10),
                   child: Container(
+                    height: 100,
+                    width: 100,
                     decoration: BoxDecoration(
                         color: HexColor('fdf8f5'),
                         borderRadius: BorderRadius.circular(10)
                     ),
-                    child: TextFormField(
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter some text';
-                        }
-                        return null;
+                    child: MaterialButton(
+                      onPressed: (){
+                        StylistRegisterCubit.get(context).getLocation(context);
                       },
-                      controller: StylistRegisterCubit.get(context).locationController,
-
-                      cursorColor: Colors.grey,
-                      cursorHeight: 30,
-                      decoration: InputDecoration(
-                        labelText: (
-                            '  Location'
-                        ),
-                        labelStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
-                          borderSide: BorderSide(
-                            width: 0,
-                            style: BorderStyle.none,
-
-                          ),
-                        ),
-                      ),
+                      child: Text(' Location'),
                     ),
                   ),
                 ),

@@ -20,3 +20,8 @@ class GetStylistDataLoadingsState extends StylistRegisterState{}
 class GeStylistDataSuccessState extends StylistRegisterState{}
 
 class GetStylistDataErorrState extends StylistRegisterState{}
+
+class GetStylistLocationLoadingsState extends StylistRegisterState{}
+
+class GeStylistLocationSuccessState extends StylistRegisterState{}
+

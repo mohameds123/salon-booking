@@ -1,4 +1,6 @@
 class UserModel{
+  double?latitude;
+  double?longitude;
   String? uId;
   String? name;
   String? email;
@@ -7,6 +9,8 @@ class UserModel{
   String? location;
   String? Specialty;
   UserModel({
+    this.longitude,
+    this.latitude,
     this.uId,
     this.email,
     this.location,
@@ -16,6 +20,8 @@ class UserModel{
     this.Specialty,
   });
   UserModel.fromMap(Map<String,dynamic>jason){
+    longitude=jason['longitude'];
+    latitude=jason['latitude'];
     uId=jason['uId'];
     email=jason['email'];
     location=jason['location'];
@@ -26,6 +32,8 @@ class UserModel{
   }
   Map<String,dynamic>toMap(){
     return{
+      'longitude':longitude,
+      'latitude':latitude,
       'uId':uId,
       'email':email,
       'location':location,
@@ -36,3 +44,4 @@ class UserModel{
     };
   }
 }
+

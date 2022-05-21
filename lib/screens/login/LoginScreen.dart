@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:saloonbooking/layout/CustomerLayout.dart';
+import 'package:saloonbooking/layout/StylistLayout.dart';
 import 'package:saloonbooking/screens/thestartscreen/ThestartScreen.dart';
+import '../../componants.dart';
 import 'cubit/cubit.dart';
 import 'cubit/states.dart';
 
@@ -11,7 +14,20 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is LoginSuccessState) {
+          navigateAndFinish(
+            context: context,
+            widget: StylistLayOut(),
+          );
+        }else if(state is CustomerLoginSuccessState) {
+          navigateAndFinish(
+            context: context,
+            widget: CustomerLayOut(),
+          );
+        }
+
+      },
       builder: (context, state) => Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
